@@ -1,13 +1,23 @@
 class Solution {
     public int maxScore(int[] nums) {
-        long sum = 0;
-        int i=nums.length-1;
         Arrays.sort(nums);
-        if(nums[nums.length-1] == 0)    return 0;
-        while(i >= 0){
-            sum += nums[i--];
-            if(sum <= 0) return nums.length-i-2;
+        reverse(nums);
+        long sum = 0;
+        int ans = 0;
+        for(int i=0;i<nums.length;i++){
+            sum += nums[i];
+            if(sum>0){
+                ans++;
+            }
         }
-        return nums.length;
+        return ans;
+    }
+    void reverse(int[] array){
+        int n = array.length;
+        for (int i = 0; i < n / 2; i++) {
+            int temp = array[i];
+            array[i] = array[n - i - 1];
+            array[n - i - 1] = temp;
+        }
     }
 }
