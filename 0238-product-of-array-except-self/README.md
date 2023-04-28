@@ -6,12 +6,12 @@
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> nums = [1,2,3,4]
+<pre style="position: relative;"><strong>Input:</strong> nums = [1,2,3,4]
 <strong>Output:</strong> [24,12,8,6]
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> nums = [-1,1,0,-3,3]
+<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre><p><strong class="example">Example 2:</strong></p>
+<pre style="position: relative;"><strong>Input:</strong> nums = [-1,1,0,-3,3]
 <strong>Output:</strong> [0,0,9,0,0]
-</pre>
+<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
