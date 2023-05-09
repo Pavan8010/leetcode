@@ -4,11 +4,11 @@ class Solution {
         int top = 0;
         int right = matrix[0].length-1;
         int bottom = matrix.length-1;
-
+    
         ArrayList<Integer> list = new ArrayList<>();
-
+    
         while(left<=right && top<=bottom){
-            
+    
             for(int i = left;i<=right && top<=bottom;i++){
                 int temp = matrix[top][i];
                 list.add(temp);
