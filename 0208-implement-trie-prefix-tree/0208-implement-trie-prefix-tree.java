@@ -1,26 +1,26 @@
 class Trie {
-    HashSet<String> hs;
+    HashSet<String> set;
     public Trie() {
-        hs=new HashSet<>();
+        set = new HashSet<>();
     }
     
     public void insert(String word) {
-        hs.add(word);
+        set.add(word);
     }
     
     public boolean search(String word) {
-        if(hs.contains(word))
-            return true;
+        if(set.contains(word))return true;
         return false;
-    } 
+    }
+    
     public boolean startsWith(String prefix) {
-        for(String it:hs){
-            if(it.startsWith(prefix))
-                return true;
+        for(String str:set){
+            if(str.startsWith(prefix))return true;
         }
         return false;
     }
 }
+
 /**
  * Your Trie object will be instantiated and called as such:
  * Trie obj = new Trie();
