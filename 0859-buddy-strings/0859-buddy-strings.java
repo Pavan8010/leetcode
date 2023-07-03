@@ -3,11 +3,6 @@ class Solution {
         int cnt=0;
         char check1='a',check2='a';
         if(s.length()!=goal.length())return false;
- 
-        Map<Character,Integer> map = new HashMap<>();
-        for(char ch:s.toCharArray()){
-            map.put(ch,map.getOrDefault(ch,0)+1);
-        }
         
         for(int i=0;i<s.length();i++){
             if(s.charAt(i) != goal.charAt(i)){
@@ -22,7 +17,9 @@ class Solution {
             }
         }
         if(cnt==0){
-            for(char ch: map.keySet()){
+            Map<Character,Integer> map = new HashMap<>();
+            for(char ch:s.toCharArray()){
+                map.put(ch,map.getOrDefault(ch,0)+1);
                 if(map.get(ch)>1)return true;
             }
         }
