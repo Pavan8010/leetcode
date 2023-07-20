@@ -5,8 +5,9 @@ class Solution {
         for(int i=0;i<n;i++){
             if(arr[i]>0) st.push(arr[i]);
             else{
-                while(!st.empty() && st.peek()>0 && st.peek()<(-arr[i])) 
+                while(!st.empty() && st.peek()>0 && st.peek()<(-arr[i])){
                     st.pop();
+                } 
                 
                 int stone = -arr[i];
                 if(!st.isEmpty() && st.peek() == stone) st.pop();
