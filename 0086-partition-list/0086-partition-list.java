@@ -10,22 +10,22 @@
  */
 class Solution {
     public ListNode partition(ListNode head, int x) {
-        ListNode low = new ListNode();
+        ListNode less = new ListNode();
         ListNode high = new ListNode();
-        ListNode lessHead = low;
-        ListNode greaterHead = high;
+        ListNode lessHead = less;
+        ListNode highHead = high;
         while(head != null){
             if(head.val<x){
                 lessHead.next = head;
                 lessHead = lessHead.next;
             }else{
-                greaterHead.next = head;
-                greaterHead = greaterHead.next;
+                highHead.next = head;
+                highHead = highHead.next;
             }
             head = head.next;
         }
         lessHead.next = high.next;
-        greaterHead.next = null;
-        return low.next;
+        highHead.next = null;
+        return less.next;
     }
 }
