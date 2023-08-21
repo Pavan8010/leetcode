@@ -14,7 +14,7 @@ class Solution {
             i++;
         }
         while(i<n && ((int)s.charAt(i)-'0')>=0 && ((int)s.charAt(i)-'0')<=9){
-            if(ans>max/10 || (ans==max/10 && (int)(s.charAt(i)-'0')>max%10)){
+            if(ans>max/10 || (ans==max/10 && (int)(s.charAt(i)-'0')>7)){
                 return (sign==1?max:min);
             }
             ans = ans*10;
